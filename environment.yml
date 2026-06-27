@@ -1,0 +1,25 @@
+name: scrna
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - scanpy=1.11
+  - anndata
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - leidenalg
+  - python-igraph
+  - python-annoy
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
+  - pip
+  - pip:
+      - scrublet
+      - celltypist
+      - harmonypy
