@@ -12,9 +12,9 @@ DDR-associated lncRNAs (GlncDDR, *Bioinformatics Advances* 2026) to single-cell 
 
 | Stage | Status |
 |-------|--------|
-| Standard scRNA-seq pipeline (established on PBMC3k) | ✅ Complete (`notebooks/00_explore.ipynb`) |
-| Breast-cancer dataset and DDR analysis | ✅ Complete (`notebooks/01_breast_ddr.ipynb`) |
-| Primary processing (reads to count matrix, Cell Ranger) | 🚧 In progress (`notebooks/02_primary_processing.ipynb`) |
+| Standard scRNA-seq pipeline (established on PBMC3k) | Complete (`notebooks/00_explore.ipynb`) |
+| Breast-cancer dataset and DDR analysis | Complete (`notebooks/01_breast_ddr.ipynb`) |
+| Primary processing (reads to count matrix, Cell Ranger) | In progress (`notebooks/02_primary_processing.ipynb`) |
 
 The PBMC3k notebook establishes and validates the downstream workflow (quality control,
 normalisation, feature selection, dimensionality reduction, clustering, and marker-based
