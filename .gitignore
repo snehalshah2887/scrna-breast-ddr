@@ -1,4 +1,7 @@
-data/
+data/*
+!data/glncddr_ddr_proteins.csv
+!data/glncddr_lncrna_clean.csv
+!data/glncddr_lncrna_DDRcorr.csv
 *.h5ad
 __pycache__/
 .ipynb_checkpoints/
