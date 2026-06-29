@@ -24,4 +24,3 @@ dependencies:
       - harmonypy==2.0.0
       - celltypist==1.7.1
       - decoupler==2.1.6
-      - gseapy==1.3.0
