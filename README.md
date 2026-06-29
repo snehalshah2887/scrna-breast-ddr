@@ -14,17 +14,18 @@ DDR-associated lncRNAs (GlncDDR, *Bioinformatics Advances* 2026) to single-cell 
 |-------|--------|
 | Standard scRNA-seq pipeline (established on PBMC3k) | ✅ Complete (`notebooks/00_explore.ipynb`) |
 | Breast-cancer dataset and DDR analysis | ✅ Complete (`notebooks/01_breast_ddr.ipynb`) |
-| End-to-end analysis from raw reads (Cell Ranger) | 🚧 In progress (`notebooks/02_cellranger_endtoend.ipynb`) |
+| Primary processing (reads to count matrix, Cell Ranger) | 🚧 In progress (`notebooks/02_primary_processing.ipynb`) |
 
 The PBMC3k notebook establishes and validates the downstream workflow (quality control,
 normalisation, feature selection, dimensionality reduction, clustering, and marker-based
 annotation), which is then applied to the breast-cancer DDR analysis in `01_breast_ddr.ipynb`.
 
-The CELLxGENE breast atlas used in `01_breast_ddr.ipynb` is supplied already processed by the
-original authors: raw counts are included, but read alignment and quantification were performed
-upstream. To demonstrate the complete pipeline from raw sequencing reads, a separate notebook
-(`02_cellranger_endtoend.ipynb`, in progress) starts from 10x Genomics FASTQ files, runs Cell
-Ranger to generate the count matrix, and carries it through the same downstream analysis.
+The breast-cancer analysis in `01_breast_ddr.ipynb` is a complete single-cell analysis, run from raw
+counts through to the biological result. The CELLxGENE atlas it uses was supplied already aligned and
+quantified by the original authors, so the one upstream step not performed there is primary
+processing: the conversion of sequencing reads into a count matrix. That step is documented separately
+in `02_primary_processing.ipynb` (in progress), which uses Cell Ranger on 10x Genomics FASTQ files to
+produce a count matrix that then enters the same downstream pipeline.
 
 ---
 
@@ -76,7 +77,7 @@ scrna-breast-ddr/
 ├── notebooks/
 │   ├── 00_explore.ipynb              standard scRNA-seq pipeline (PBMC3k)
 │   ├── 01_breast_ddr.ipynb           breast-cancer DDR analysis (CELLxGENE atlas)
-│   └── 02_cellranger_endtoend.ipynb  end-to-end from raw FASTQ via Cell Ranger (in progress)
+│   └── 02_primary_processing.ipynb   primary processing: sequencing reads to count matrix (in progress)
 ├── data/
 │   ├── glncddr_ddr_proteins.csv      491 DDR protein-coding genes (tracked)
 │   ├── glncddr_lncrna_clean.csv      6,841 predicted DDR-lncRNAs, biotype-cleaned (tracked)
